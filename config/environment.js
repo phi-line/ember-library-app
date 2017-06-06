@@ -7,13 +7,17 @@ module.exports = function(environment) {
     rootURL: '/',
     locationType: 'auto',
 
+    // !!! UPDATE THESE KEYS !!!
+    // Visit https://console.firebase.google.com/
+    // Click on your app. Click on Overview. Click on "Add Firebase to your web app". Copy paste those keys.
     firebase: {
-      apiKey: 'xyz',
-      authDomain: 'library-app-8d004.firebaseapp.com',
-      databaseURL: 'https://library-app-8d004.firebaseio.com',
-      storageBucket: 'library-app-8d004.appspot.com',
+      apiKey: 'UPDATE-THIS-TO-YOUR-OWN-API-KEY',
+      authDomain: 'UPDATE-THIS-TO-YOUR-OWN-FIREBASE-APP.firebaseapp.com',
+      projectId: 'UPDATE-THIS-TO-YOUR-OWN-PROJECT-ID',
+      databaseURL: 'https://UPDATE-THIS-TO-YOUR-OWN-FIREBASE-APP.firebaseio.com',
+      storageBucket: 'UPDATE-THIS-TO-YOUR-OWN-FIREBASE-APP.appspot.com',
+      messagingSenderId: 'UPDATE-THIS'
     },
-
 
     // if using ember-cli-content-security-policy
     contentSecurityPolicy: {
@@ -41,10 +45,10 @@ module.exports = function(environment) {
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
-    ENV.APP.LOG_ACTIVE_GENERATION = true;
-    ENV.APP.LOG_TRANSITIONS = true;
-    ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
-    ENV.APP.LOG_VIEW_LOOKUPS = true;
+    // ENV.APP.LOG_ACTIVE_GENERATION = true;
+    // ENV.APP.LOG_TRANSITIONS = true;
+    // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
+    // ENV.APP.LOG_VIEW_LOOKUPS = true;
   }
 
   if (environment === 'test') {
@@ -60,6 +64,10 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
 
+    // We need this for activating Faker in production environment.
+    ENV['ember-faker'] = {
+      enabled: true
+    };
   }
 
   return ENV;

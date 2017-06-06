@@ -15,7 +15,10 @@ export default Ember.Route.extend({
     willTransition() {
       let model = this.controller.get('model');
 
-      model.rollbackAttributes();
+      if (model.get('isNew')) {
+        model.destroyRecord();
+      }
+
       this.controller.set('responseMessage', false);
     }
   }

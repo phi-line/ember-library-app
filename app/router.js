@@ -18,8 +18,11 @@ Router.map(function() {
 
   this.route('libraries', function() {
     this.route('new');
-    this.route('edit', {path: '/:libary_id/edit'});
+    this.route('edit', { path: '/:library_id/edit' });
   });
+
+  this.route('authors');
+  this.route('books');
 });
 
 export default Router;

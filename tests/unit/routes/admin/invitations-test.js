@@ -6,6 +6,6 @@ moduleFor('route:admin/invitations', 'Unit | Route | admin/invitations', {
 });
 
 test('it exists', function(assert) {
-  let route = this.subject();
+  var route = this.subject();
   assert.ok(route);
 });

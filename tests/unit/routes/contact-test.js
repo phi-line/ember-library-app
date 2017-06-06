@@ -6,6 +6,6 @@ moduleFor('route:contact', 'Unit | Route | contact', {
 });
 
 test('it exists', function(assert) {
-  let route = this.subject();
+  var route = this.subject();
   assert.ok(route);
 });

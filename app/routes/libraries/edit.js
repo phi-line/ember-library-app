@@ -1,4 +1,3 @@
-// app/routes/libraries/edit.js
 import Ember from 'ember';
 
 export default Ember.Route.extend({
@@ -7,11 +6,11 @@ export default Ember.Route.extend({
     return this.store.findRecord('library', params.library_id);
   },
 
-  setupController: function (controller, model) {
+  setupController(controller, model) {
     this._super(controller, model);
 
-    controller.set('title', 'Create a new library');
-    controller.set('buttonLabel', 'Create');
+    controller.set('title', 'Edit library');
+    controller.set('buttonLabel', 'Save changes');
   },
 
   renderTemplate() {
@@ -25,7 +24,6 @@ export default Ember.Route.extend({
     },
 
     willTransition(transition) {
-
       let model = this.controller.get('model');
 
       if (model.get('hasDirtyAttributes')) {

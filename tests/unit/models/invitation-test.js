@@ -6,7 +6,7 @@ moduleForModel('invitation', 'Unit | Model | invitation', {
 });
 
 test('it exists', function(assert) {
-  let model = this.subject();
-  // let store = this.store();
+  var model = this.subject();
+  // var store = this.store();
   assert.ok(!!model);
 });
