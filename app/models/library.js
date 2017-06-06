@@ -5,5 +5,7 @@ export default DS.Model.extend({
   addresss: DS.attr('string'),
   phone: DS.attr('string'),
 
+  books: DS.hasMany('book'),
+
   isValid: Ember.computed.notEmpty('name')
 });
